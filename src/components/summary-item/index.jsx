@@ -7,13 +7,21 @@ const classes = {
   description: 'text-md text-gray-600 font-light',
 };
 
-const SummaryItem = ({ name, description, link = false, internal = false }) => {
+const SummaryItem = ({ name, description, link = false, date = false, internal = false }) => {
   let linkContent;
   if (internal) {
     linkContent = <Link to={link}>{name}</Link>;
   } else {
     linkContent = <a href={link}>{name}</a>;
   }
+
+  let discContent;
+  if (date) {
+    discContent = <p className={classes.description}>{date} {'//'} {description}</p>;
+  } else {
+    discContent = <p className={classes.description}>{description}</p>;
+  }
+
 
   return (
     <div className={classes.wrapper}>
@@ -24,7 +32,7 @@ const SummaryItem = ({ name, description, link = false, internal = false }) => {
       >
         {link ? linkContent : name}
       </h3>
-      <p className={classes.description}>{description}</p>
+      {discContent}
     </div>
   );
 };

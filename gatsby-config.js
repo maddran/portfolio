@@ -5,71 +5,65 @@ module.exports = {
     // Your Name
     name: 'Madhav (Maddie) Narendran',
     // Main Site Title
-    title: `Madhav Narendran | Data Scientist`,
+    title: `madhav.me`,
     // Description that goes under your name in main bio
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit, ipsum.`,
+    description: `Professional Data Scientist • Amateur runner / beer enthusiast / everything else • Calgary, AB`,
     // Optional: Twitter account handle
-    author: `@maddran`,
+    author: ``,
     // Optional: Github account URL
     github: `https://github.com/maddran`,
     // Optional: LinkedIn account URL
-    linkedin: ``,
+    linkedin: `https://www.linkedin.com/in/madhavnaren/`,
     // Content of the About Me section
-    about: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.`,
+    about: `I am a data nerd with a passion for developing data-driven solutions for real-world problems.
+    My areas of interest (so far) are related to applied machine learning in fields such as public health, news media, and sports.`,
+    
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
-        name: 'Devfolio',
+        name: 'NHL Scores App',
         description:
-          'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+          'My first foray into interactive visualization with Dash for Python. **Fair warning, the app takes a minute to load up as it\'s hosted on a free Heroku dyno.',
+        link: 'https://nhl-scores-app.herokuapp.com/',
       },
-      {
-        name: 'ChromeExtensionKit',
-        description:
-          'Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates',
-        link: 'https://chromeextensionkit.com/?ref=devfolio',
-      },
-      {
-        name: 'Another Cool Project',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
-      },
-    ],
+
+    ],    
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
-        name: 'Acme Corp',
-        description: 'Full-Stack Developer, February 2020 - Present',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'University of Helsinki',
+        description: 'Research Assistant - Algorithmic Data Science, February 2020 - September 2020',
+        link: '',
       },
       {
-        name: 'Globex Corp',
-        description: 'Full-Stack Developer, December 2017 - February 2020',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'CESAR (Canadian Energy Systems Analysis Research)',
+        description: 'Energy Systems Analyst, February 2019 - August 2019',
+        link: '',
       },
       {
-        name: 'Hooli',
-        description: 'Full-Stack Developer, May 2015 - December 2017',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'BP Canada Energy Group',
+        description: 'Trade Analyst / Commodity Risk Analyst, June 2016 - October 2017',
+        link: '',
       },
     ],
+    
+    
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
-        name: 'Languages & Frameworks',
+        name: 'Languages',
         description:
-          'JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP',
+          'Python • R • C++ • MATLAB • SQL',
       },
       {
-        name: 'Databases',
-        description: 'MongoDB, PostreSQL, MySQL',
+        name: 'Tools / Modules',
+        description: 
+          'Jupyter • Dash • Dask • NLTK • Spacy • NetworkX • Scikit-Learn • PyTorch • PySpark',
       },
       {
-        name: 'Other',
+        name: 'Concepts',
         description:
-          'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+          'Natural Language Processing (NLP) • Network Analysis • Deep Learning • Data Mining • Distributed and Parallel Computing',
       },
     ],
   },
