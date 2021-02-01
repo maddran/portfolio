@@ -3,7 +3,6 @@ title: NHL Score Margin Prediction • Part 1 - Downloading Game Data and Pre-Pr
 date: '2020-12-12T12:00:00.00Z'
 description: 'This is the first of a series of mini-projects focused on using data from NHL Stats to predict the score margin of NHL games.'
 ---
-
 <a href="https://colab.research.google.com/github/maddran/NHL-pred/blob/main/NHL_games_data.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 
@@ -410,21 +409,23 @@ get_rolling(df,3).head(10)
 
 
 
-<div>
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
-
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
     .dataframe thead th {
         text-align: right;
     }
+    .dataframe td {
+        padding:0 5px 0 0; /* Only right padding*/
+        text-align: center;
+    }
 </style>
-<table border="1" class="dataframe">
+<table border="2" class="dataframe" cellpadding="5" cellspacing="10">
   <thead>
     <tr style="text-align: right;">
       <th></th>

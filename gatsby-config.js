@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `madhav.me`,
     // Description that goes under your name in main bio
-    description: `Professional Data Scientist • Amateur runner / beer enthusiast / everything else • Calgary, AB`,
+    description: `Data Scientist • Calgary, AB`,
     // Optional: Twitter account handle
     author: ``,
     // Optional: Github account URL
@@ -27,7 +27,25 @@ module.exports = {
         link: 'https://nhl-scores-app.herokuapp.com/',
       },
 
-    ],    
+    ],   
+    // Optional: List your education, they must have `name` and `description`. `link` is optional.
+    education: [
+      {
+        name: 'MSc Data Science - University of Helsinki',
+        description: 'Helsinki, Finland • 2019 - 2021',
+        link: '',
+      },
+      {
+        name: 'BSc Electrical Engineering - University of Calgary',
+        description: 'Calgary, Canada • 2010 - 2016',
+        link: '',
+      },
+      {
+        name: 'BA Economics - University of Calgary',
+        description: 'Calgary, Canada • 2010 - 2016',
+        link: '',
+      }        
+    ], 
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
