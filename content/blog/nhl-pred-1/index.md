@@ -150,10 +150,6 @@ df.columns
     Summary of 2018-19 season game data:
     
 
-
-
-
-
     Index(['faceoffWinPct', 'gameDate', 'gameId', 'gamesPlayed', 'goalsAgainst',
            'goalsAgainstPerGame', 'goalsFor', 'goalsForPerGame', 'homeRoad',
            'losses', 'opponentTeamAbbrev', 'otLosses', 'penaltyKillNetPct',
@@ -264,7 +260,7 @@ get_schedule(df, teamLU).head()
 
 
 
-<div>
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;

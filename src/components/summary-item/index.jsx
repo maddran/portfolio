@@ -17,7 +17,7 @@ const SummaryItem = ({ name, description, link = false, date = false, internal =
 
   let discContent;
   if (date) {
-    discContent = <p className={classes.description}>{date} {'//'} {description}</p>;
+    discContent = <p className={classes.description}>{date} {' • '} {description}</p>;
   } else {
     discContent = <p className={classes.description}>{description}</p>;
   }
