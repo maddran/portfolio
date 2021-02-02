@@ -12,7 +12,7 @@ In this series, I will implement a few different game score/margin prediction pi
 
 ---
 
-##Module Imports
+## Module Imports
 
 
 ```
@@ -30,18 +30,18 @@ Let's get cracking with some function definitions. I'm going to provide a brief 
 ### Call NHL API
 
 **Avoid Scraping Raw HTML -**
-If you're not familiar with web development, your first instinct when trying to scrape data from a table such as [this one on NHL Stats](http://www.nhl.com/stats/teams), might be to try to download the data directly as you see it rendered in your browser. While there are plently of Python modules that will allow you to do this relatively easily, it is not the most robust approach as there is a good chance your implementation will break once the site undergoes an update which changes its layout.
+If you're not familiar with web development, your first instinct when trying to scrape data from a table such as [this one on NHL Stats](http://www.nhl.com/stats/teams), might be to try to download the data directly as you see it rendered in your browser. While there are plenty of Python modules that will allow you to do this relatively easily, it is not the most robust approach as there is a good chance your implementation will break once the site undergoes an update which changes its layout.
 
 **Identify Data API -** The better approach is to try to identify the API call which produces the data that is being displayed. To do this, use your browser's developer tools to inspect the network traffic as you load the page which contains your data ([Chrome demo](https://developers.google.com/web/tools/chrome-devtools/network)). With a bit of experience, spotting these data APIs becomes quite easy. But, when you're starting off, expect there to be some trial and error.
 
 **Replicate API call in Python -** If you are lucky enough to spot a data API, you can replicate it in Python code by:
 
 
-1.   Right clicking on the API call in your browser's developer tools
+1.   Right-clicking on the API call in your browser's developer tools
 2.   Select Copy > Copy as cURL
 3.   Navigate to [this handy utility](https://curl.trillworks.com/) (or something similar) and paste in the copied cURL command to generate the corresponding Python `requests` code.
 
-The generated Python code can now be used with the Python `requests` module as in the function.  `call_nhl` is a function that:
+The generated Python code can now be used with the Python `requests` module as in the function  `call_nhl` which:
 
 *   takes mandatory input `startSeason` and optional input `endSeason`, each of which are strings in the format `20xx20yy` where `yy = xx + 1` (e.g. `20142015`, `20152016`, etc.)
 *   outputs `response`, the JSON response from the API.
@@ -228,10 +228,10 @@ teamLU
 
 Now, we define a function `home_road` which takes a game summary dataframe and the team lookup dictionary `team_LU` to produce four new columns:
 
-*   `home, road` - contain hoame and road team IDs, respectively
-*   `homeName, roadName` - contain hoame and road team names, respectively
+*   `home, road` - contain home and road team IDs, respectively
+*   `homeName, roadName` - contain home and road team names, respectively
 
-The funciton `get_schedule` puts it all together by applying `home_road` to each entry in the game summary dataframe `df` and then groups it by the `gameId` and `gameDate` columns to produce the final schedule:
+The function `get_schedule` puts it all together by applying `home_road` to each entry in the game summary dataframe `df` and then groups it by the `gameId` and `gameDate` columns to produce the final schedule:
 
 
 ```
@@ -346,12 +346,12 @@ get_schedule(df, teamLU).head()
 
 ### Rolling Aggregate
 
-One hypothesis I'd like to test is that performance in the recent past (3-7 games) is far more indicative of future performance than games in the far past. So, let's write a funciton that produces a rolling aggregate of some of columns in the game summary.
+One hypothesis I'd like to test is that performance in the recent past (3-7 games) is far more indicative of future performance than games in the far past. So, let's write a function that produces a rolling aggregate of some of columns in the game summary.
 
 `rolling_aggregate` takes a dataframe of game summaries and an integer `window` representing the window of games to consider in each aggregation:
 
 
-*   for certain data columns such as `'gamesPlayed', 'goalsAgainst', 'goalsFor', 'points', 'regulationAndOtWins'` etc., the aggreagtion should be a sum
+*   for certain data columns such as `'gamesPlayed', 'goalsAgainst', 'goalsFor', 'points', 'regulationAndOtWins'` etc., the aggregation should be a sum
 *   for columns such as `'goalsForPerGame', 'goalsAgainstPerGame'` etc., the aggregation should be a mean
 *   certain others can also be summed cumulatively
 
@@ -680,9 +680,9 @@ get_rolling(df,3).head(10)
 
 ## Putting it all together
 
-Let's wrap all the functions we defined into a single function we can all on mutiple seasons of game summary data.
+Let's wrap all the functions we defined into a single function we can all on multiple seasons of game summary data.
 
-`process_data` takes a dicttionary of game summary dataframes produced by `get_gameData` and outputs a dictionary containing the following:
+`process_data` takes a dictionary of game summary dataframes produced by `get_gameData` and outputs a dictionary containing the following:
 
 
 *   raw dataframe, 
@@ -810,7 +810,7 @@ The above passes a sense check:
 *   `raw_data` and `rolling` always have `82 games x N teams = 82N` entries
 *   `schedule` always has `82N/2` entries.
 
-Now that we are statisfied with the accuracy of the data, let's serialize it and save it for later - i.e. Part 2!
+Now that we are satisfied with the accuracy of the data, let's serialize it and save it for later - i.e. Part 2!
 
 
 ```
